@@ -22,6 +22,7 @@ O projeto segue uma arquitetura em camadas:
 - **API**: Controllers, validações de entrada e DTOs
 - **Services / Application**: Regras de negócio e orquestração
 - **Repositories / Infra**: Persistência de dados (EF Core) e acesso a banco
+    - **Projeto de Testes xUnit**: Existe um projeto de testes unitários para a camada de repositórios.   
 - **Data**: Instruçòes de acesso a base de dados
 - **Domain**: Entidades e contratos de repositório
 

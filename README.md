@@ -22,9 +22,8 @@ O projeto segue uma arquitetura em camadas:
 - **API**: Controllers, validações de entrada e DTOs
 - **Services / Application**: Regras de negócio e orquestração
 - **Repositories / Infra**: Persistência de dados (EF Core) e acesso a banco
-- **Domain**: Entidades, contratos e regras centrais
-
-> Importante: **Controllers não acessam o Repository diretamente**. Toda interação passa pela camada de Services.
+- **Data**: Instruçòes de acesso a base de dados
+- **Domain**: Entidades e contratos de repositório
 
 ---
 

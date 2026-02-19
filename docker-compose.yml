@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: escola-database
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=Escola@26
+    ports:
+      - "1433:1433"
+    volumes:
+      - sql_data:/var/opt/mssql
+    restart: unless-stopped
+  
+  escola-backend:
+    image: escola-backend
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5078:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Server=sqlserver,1433;Database=escola;User Id=sa;Password=Escola@26;TrustServerCertificate=True;
+      - ASPNETCORE_URLS=http://+:8080
+    depends_on:
+      - sqlserver
+    command: sh -c "dotnet ef database update --project Escola.Data --startup-project Escola.API && dotnet Escola.API.dll"
+
+volumes:
+  sql_data:
+
+networks:
+  app-network:
+    driver: bridge

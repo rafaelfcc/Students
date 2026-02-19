@@ -1,0 +1,78 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Domain", "1 - Domain", "{98EE39F9-FDA8-4977-A3EB-4ED9A754715E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Data", "2 - Data", "{CD58B020-5D0E-468D-8680-0010FEA4855A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Business", "3 - Business", "{711C1923-FCBC-49EF-9620-B37F7213B8E6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - Presentation", "5 - Presentation", "{89E76D0C-0B27-473A-B973-FB46C847D657}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Escola.Domain", "Escola.Domain\Escola.Domain.csproj", "{7B655539-32DF-4A40-AFAD-21291449E2BD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Escola.Data", "Escola.Data\Escola.Data.csproj", "{938E4E19-56BC-48E8-AC7F-82E0AACEBBC9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6 - ItensDeSolucao", "6 - ItensDeSolucao", "{00175327-FB33-4ABA-8965-867055A9BE81}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+		Dockerfile = Dockerfile
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Escola.Repositories", "Escola.Repositories\Escola.Repositories.csproj", "{AC376C4A-BC4B-4CE6-9505-3EA8343110F7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Escola.API", "Escola.API\Escola.API.csproj", "{9735C03F-A87C-49BA-B6A3-183236B30F3D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Escola.Repositories.Tests", "Escola.Repositories.Tests\Escola.Repositories.Tests.csproj", "{A5ACDB0C-1290-4A90-A673-72D46889B9F2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Application", "4 - Application", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Escola.Services", "Escola.Services\Escola.Services.csproj", "{00D9596D-E8C9-4BB4-9C97-F4BA142255C0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7B655539-32DF-4A40-AFAD-21291449E2BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B655539-32DF-4A40-AFAD-21291449E2BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B655539-32DF-4A40-AFAD-21291449E2BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B655539-32DF-4A40-AFAD-21291449E2BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{938E4E19-56BC-48E8-AC7F-82E0AACEBBC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{938E4E19-56BC-48E8-AC7F-82E0AACEBBC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{938E4E19-56BC-48E8-AC7F-82E0AACEBBC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{938E4E19-56BC-48E8-AC7F-82E0AACEBBC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC376C4A-BC4B-4CE6-9505-3EA8343110F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC376C4A-BC4B-4CE6-9505-3EA8343110F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC376C4A-BC4B-4CE6-9505-3EA8343110F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC376C4A-BC4B-4CE6-9505-3EA8343110F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9735C03F-A87C-49BA-B6A3-183236B30F3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9735C03F-A87C-49BA-B6A3-183236B30F3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9735C03F-A87C-49BA-B6A3-183236B30F3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9735C03F-A87C-49BA-B6A3-183236B30F3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5ACDB0C-1290-4A90-A673-72D46889B9F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5ACDB0C-1290-4A90-A673-72D46889B9F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5ACDB0C-1290-4A90-A673-72D46889B9F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5ACDB0C-1290-4A90-A673-72D46889B9F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00D9596D-E8C9-4BB4-9C97-F4BA142255C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00D9596D-E8C9-4BB4-9C97-F4BA142255C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00D9596D-E8C9-4BB4-9C97-F4BA142255C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00D9596D-E8C9-4BB4-9C97-F4BA142255C0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7B655539-32DF-4A40-AFAD-21291449E2BD} = {98EE39F9-FDA8-4977-A3EB-4ED9A754715E}
+		{938E4E19-56BC-48E8-AC7F-82E0AACEBBC9} = {CD58B020-5D0E-468D-8680-0010FEA4855A}
+		{AC376C4A-BC4B-4CE6-9505-3EA8343110F7} = {711C1923-FCBC-49EF-9620-B37F7213B8E6}
+		{9735C03F-A87C-49BA-B6A3-183236B30F3D} = {89E76D0C-0B27-473A-B973-FB46C847D657}
+		{A5ACDB0C-1290-4A90-A673-72D46889B9F2} = {711C1923-FCBC-49EF-9620-B37F7213B8E6}
+		{00D9596D-E8C9-4BB4-9C97-F4BA142255C0} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E364629F-CD41-4A82-842D-9428B3B5CE1D}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,390 @@
+{
+	"info": {
+		"_postman_id": "b85cc4e3-afe0-4ea5-9de5-1bdd33a9309c",
+		"name": "Escola - Acessos a API Backend",
+		"description": "Conjunto de chamadas para acessar a Web API da Escola CCAA.\n\nAo efetuar as chamadas as camadas restritas à autenticações, Não se esqueça de renovar os Tokens JWT Bearers. O tempo de duração é de 60 minutos.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4170559"
+	},
+	"item": [
+		{
+			"name": "Fazer Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"rfccrj@gmail.com\",\r\n    \"senha\": \"teste123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5078/api/LoginRequest/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5078",
+					"path": [
+						"api",
+						"LoginRequest",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ler Usuário Existente",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6InJmY2NyakBnbWFpbC5jb20iLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJ0ZXN0ZTEyMyIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IlVzZXIiLCJleHAiOjE3NTQyODQ5MjIsImlzcyI6ImJpYmxpb3RlY2EiLCJhdWQiOiJsZWl0b3JlcyJ9.QUaVfz5ur3zYunJ34Y6Rbl3qWwnWAUw0qWoBnW935zM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5078/api/Usuario/rfccrj%40gmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5078",
+					"path": [
+						"api",
+						"Usuario",
+						"rfccrj%40gmail.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Inserir Usuário",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6InJmY2NyakBnbWFpbC5jb20iLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJ0ZXN0ZTEyMyIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IlVzZXIiLCJleHAiOjE3NTQyODUzNzQsImlzcyI6ImJpYmxpb3RlY2EiLCJhdWQiOiJsZWl0b3JlcyJ9.rQqaa_H7bstMo98oerNH7A0o3Fn7W8kWR_ohDXiv_b8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nome\": \"José das Couver\",\r\n  \"dataNascimento\": \"1980-01-01T04:28:37.759Z\",\r\n  \"emailLogin\": \"zedascouves@zmail.com\",\r\n  \"senha\": \"teste999\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:52824/api/Usuario",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "52824",
+					"path": [
+						"api",
+						"Usuario"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Inserir Usuário",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6InJmY2NyakBnbWFpbC5jb20iLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJ0ZXN0ZTEyMyIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IlVzZXIiLCJleHAiOjE3NTQyODUzNzQsImlzcyI6ImJpYmxpb3RlY2EiLCJhdWQiOiJsZWl0b3JlcyJ9.rQqaa_H7bstMo98oerNH7A0o3Fn7W8kWR_ohDXiv_b8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5078/api/Livros?usuarioRegistro=rfccrj@gmail.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5078",
+							"path": [
+								"api",
+								"Livros"
+							],
+							"query": [
+								{
+									"key": "usuarioRegistro",
+									"value": "rfccrj@gmail.com"
+								},
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 06 Aug 2025 04:15:15 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": \"270abab8-6a79-4592-83f3-3070e146e259\",\n        \"titulo\": \"Teoria da Música\",\n        \"isbn\": \"978-85-7060-013-1\",\n        \"generoId\": 3,\n        \"autor\": \"Bohumil Med\",\n        \"editoraId\": 3,\n        \"sinopse\": \"Obra consagrada que apresenta fundamentos teóricos da música com linguagem acessível e progressiva. Utilizada em escolas de música, conservatórios e cursos técnicos.\",\n        \"usuarioRegistro\": \"rfccrj@gmail.com\",\n        \"caminhoFoto\": \"/uploads/2dfbf92a-77de-471d-3282-08ddd1ea4bf9_teoria_da_musica.JPG\",\n        \"generoLivro\": {\n            \"id\": 3,\n            \"genero\": \"Didático\"\n        },\n        \"editora\": {\n            \"id\": 3,\n            \"nome\": \"Ricordi\"\n        },\n        \"fotoLivro\": 0\n    },\n    {\n        \"id\": \"0fd11c8f-15ac-4e9a-abf2-7e2499fd2ff7\",\n        \"titulo\": \"O Senhor dos Anéis\",\n        \"isbn\": \"978-85-222-0573-5\",\n        \"generoId\": 2,\n        \"autor\": \"J.R.R. Tolkien\",\n        \"editoraId\": 2,\n        \"sinopse\": \"Uma épica jornada pela Terra Média em que um grupo improvável de heróis precisa destruir um anel mágico e maligno para evitar que um senhor das trevas domine o mundo.\",\n        \"usuarioRegistro\": \"rfccrj@gmail.com\",\n        \"caminhoFoto\": \"0\",\n        \"generoLivro\": {\n            \"id\": 2,\n            \"genero\": \"Fantasia\"\n        },\n        \"editora\": {\n            \"id\": 2,\n            \"nome\": \"Martins Fontes\"\n        },\n        \"fotoLivro\": 0\n    },\n    {\n        \"id\": \"28ecc827-6eb3-498c-9583-95d560ff290e\",\n        \"titulo\": \"Ansiedade - Como enfrentar o mal do século\",\n        \"isbn\": \"978-85-452-0016-2\",\n        \"generoId\": 4,\n        \"autor\": \"Augusto Cury\",\n        \"editoraId\": 4,\n        \"sinopse\": \"O livro apresenta conceitos da psicologia para ajudar o leitor a entender e enfrentar a ansiedade, com foco na Síndrome do Pensamento Acelerado, termo cunhado pelo autor.\",\n        \"usuarioRegistro\": \"rfccrj@gmail.com\",\n        \"caminhoFoto\": \"0\",\n        \"generoLivro\": {\n            \"id\": 4,\n            \"genero\": \"Auto-Ajuda\"\n        },\n        \"editora\": {\n            \"id\": 4,\n            \"nome\": \"Benvirá\"\n        },\n        \"fotoLivro\": 0\n    },\n    {\n        \"id\": \"1f098cac-9c52-4b63-9529-aaa0178083bc\",\n        \"titulo\": \"O Pequeno Príncipe\",\n        \"isbn\": \"978-85-359-0277-7\",\n        \"generoId\": 1,\n        \"autor\": \"Antoine de Saint-Exupéry\",\n        \"editoraId\": 1,\n        \"sinopse\": \"Uma história poética e filosófica contada por um piloto que encontra um pequeno príncipe vindo de outro planeta. A obra aborda temas como amizade, amor e o sentido da vida.\",\n        \"usuarioRegistro\": \"rfccrj@gmail.com\",\n        \"caminhoFoto\": \"0\",\n        \"generoLivro\": {\n            \"id\": 1,\n            \"genero\": \"Fábula\"\n        },\n        \"editora\": {\n            \"id\": 1,\n            \"nome\": \"Agir\"\n        },\n        \"fotoLivro\": 0\n    },\n    {\n        \"id\": \"496163e7-0ed0-4c44-ab34-b17b381c9f00\",\n        \"titulo\": \"Livro Teste\",\n        \"isbn\": \"978-85-359-0000-7\",\n        \"generoId\": 6,\n        \"autor\": \"Rafael Caixeiro\",\n        \"editoraId\": 1,\n        \"sinopse\": \"Teste\",\n        \"usuarioRegistro\": \"rfccrj@gmail.com\",\n        \"caminhoFoto\": \"0\",\n        \"generoLivro\": {\n            \"id\": 6,\n            \"genero\": \"Tecnologia\"\n        },\n        \"editora\": {\n            \"id\": 1,\n            \"nome\": \"Agir\"\n        },\n        \"fotoLivro\": 0\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Deletar Usuário Existente",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6InJmY2NyakBnbWFpbC5jb20iLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJ0ZXN0ZTEyMyIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IlVzZXIiLCJleHAiOjE3NTQyODUzNzQsImlzcyI6ImJpYmxpb3RlY2EiLCJhdWQiOiJsZWl0b3JlcyJ9.rQqaa_H7bstMo98oerNH7A0o3Fn7W8kWR_ohDXiv_b8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5078/api/Usuario/zedascouves%40zmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5078",
+					"path": [
+						"api",
+						"Usuario",
+						"zedascouves%40zmail.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Alterar Usuário",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6InJmY2NyakBnbWFpbC5jb20iLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJ0ZXN0ZTEyMyIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IlVzZXIiLCJleHAiOjE3NTQzMjQxNzgsImlzcyI6ImJpYmxpb3RlY2EiLCJhdWQiOiJsZWl0b3JlcyJ9.cB7Fa1YGGdvpXe_Xbxb-qCt-3Jx8RrGX1x7StXfGOts",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nome\": \"Teste Abc\",\r\n  \"dataNascimento\": \"1991-01-01T04:28:37.759Z\",\r\n  \"emailLogin\": \"teste@teste.com\",\r\n  \"senha\": \"teste987\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:52824/api/Usuario/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "52824",
+					"path": [
+						"api",
+						"Usuario",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Relatório por Usuário",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6InJmY2NyakBnbWFpbC5jb20iLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJ0ZXN0ZTEyMyIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IlVzZXIiLCJleHAiOjE3NTQ0NTQ4NzMsImlzcyI6ImJpYmxpb3RlY2EiLCJhdWQiOiJsZWl0b3JlcyJ9.WdGSB5_Y6wlK8azGO1E9fUmeukXdOpBw5S3-9lJ_SOY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5078/api/Livros?usuarioRegistro=rfccrj@gmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5078",
+					"path": [
+						"api",
+						"Livros"
+					],
+					"query": [
+						{
+							"key": "usuarioRegistro",
+							"value": "rfccrj@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Carregar Lista de Livros",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6InJmY2NyakBnbWFpbC5jb20iLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJ0ZXN0ZTEyMyIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IlVzZXIiLCJleHAiOjE3NTQ0OTYwNzAsImlzcyI6ImJpYmxpb3RlY2EiLCJhdWQiOiJsZWl0b3JlcyJ9.5g6dXExrZsgyFOj2PW3p1LTzNHAVNQzKTcd7_MAU5K0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5078/api/Livros/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5078",
+					"path": [
+						"api",
+						"Livros",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Carregar livro por ID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6InJmY2NyakBnbWFpbC5jb20iLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJ0ZXN0ZTEyMyIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IlVzZXIiLCJleHAiOjE3NTQ0OTYwNzAsImlzcyI6ImJpYmxpb3RlY2EiLCJhdWQiOiJsZWl0b3JlcyJ9.5g6dXExrZsgyFOj2PW3p1LTzNHAVNQzKTcd7_MAU5K0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5078/api/Livros/0FD11C8F-15AC-4E9A-ABF2-7E2499FD2FF7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5078",
+					"path": [
+						"api",
+						"Livros",
+						"0FD11C8F-15AC-4E9A-ABF2-7E2499FD2FF7"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "jwt",
+		"jwt": [
+			{
+				"key": "algorithm",
+				"value": "HS256",
+				"type": "string"
+			},
+			{
+				"key": "isSecretBase64Encoded",
+				"value": false,
+				"type": "boolean"
+			},
+			{
+				"key": "payload",
+				"value": "{}",
+				"type": "string"
+			},
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			},
+			{
+				"key": "headerPrefix",
+				"value": "Bearer",
+				"type": "string"
+			},
+			{
+				"key": "queryParamKey",
+				"value": "token",
+				"type": "string"
+			},
+			{
+				"key": "header",
+				"value": "{}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

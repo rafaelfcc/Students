@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Properties\wwwroot\uploads\2dfbf92a-77de-471d-3282-08ddd1ea4bf9_teoria_da_musica.JPG" />
+    <Content Include="Properties\wwwroot\uploads\33ba37f8-7c99-417d-a3b0-a974cf99a59e_teoria_da_musica.JPG" />
+    <Content Include="Properties\wwwroot\uploads\7d512758-2072-462d-a982-dc1ea8228a3e_teoria_da_musica.JPG" />
+    <Content Include="Properties\wwwroot\uploads\803fa2af-89ae-4694-a43e-d407c062cab9_teoria_da_musica.JPG" />
+    <Content Include="Properties\wwwroot\uploads\9f194c25-2e03-4b7a-9611-3238c4940541_teoria_da_musica.JPG" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="14.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.22.1" />
+    <PackageReference Include="QuestPDF" Version="2025.7.0" />
+    <PackageReference Include="Serilog.AspNetCore" Version="10.0.0" />
+    <PackageReference Include="Serilog.Enrichers.Environment" Version="3.0.1" />
+    <PackageReference Include="Serilog.Enrichers.Thread" Version="4.0.0" />
+    <PackageReference Include="Serilog.Settings.Configuration" Version="10.0.0" />
+    <PackageReference Include="Serilog.Sinks.Console" Version="6.1.1" />
+    <PackageReference Include="Serilog.Sinks.File" Version="7.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Escola.Data\Escola.Data.csproj" />
+    <ProjectReference Include="..\Escola.Domain\Escola.Domain.csproj" />
+    <ProjectReference Include="..\Escola.Repositories\Escola.Repositories.csproj" />
+    <ProjectReference Include="..\Escola.Services\Escola.Services.csproj" />
+  </ItemGroup>
+
+</Project>

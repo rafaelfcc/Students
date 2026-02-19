@@ -38,5 +38,6 @@ Tendo uma instalação do Docker Desktop, abra alguma ferrametna de prompt de co
 
 ```bash
 docker compose up -d --build
+```
 
 Caso queira testar os endpoints isoladamente pelo Swagger, na parte de autenticação, coloque apenas a string do token gerada dinamicamente, sem escrever 'Bearer' no início

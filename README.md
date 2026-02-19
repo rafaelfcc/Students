@@ -1,32 +1,41 @@
-Este projeto é uma API desenvolvida em .NET 8 (C#) com abordagem Code First utilizando Entity Framework Core, e está completamente dockerizado para facilitar a execução e o setup do ambiente de desenvolvimento.
+# Students API (Backend)
 
-O ambiente é composto por três serviços, definidos via docker-compose:
-- API .NET 8
-- SQL Server (como base de dados)
-- SMTP4DEV (servidor SMTP fake para ambiente de desenvolvimento)
+Backend do projeto **Students**, desenvolvido em **ASP.NET Core** com arquitetura em camadas, autenticação **JWT**, documentação via **Swagger** e observabilidade com **Serilog**. O projeto está **dockerizado** para rodar localmente com um único comando.
 
-Para rodar todo o ambiente, é necessário ter o Docker Desktop instalado.
-Basta executar a seguinte linha a partir de um CMD Prompt na raiz do projeto (onde se encontra o docker-compose.yml):
+---
 
-	docker-compose up --build
-	
-Isso fará o build e a execução dos três serviços automaticamente.
-Após esse passo, a aplicação estará disponível na URL:
+## Stack / Tecnologias
 
-	http://localhost:5078/api
-	
-O servidor SMTP4DEV poderá ser acessado no Browser via:
+- **.NET 8** (ASP.NET Core Web API)
+- **Entity Framework Core**
+- **JWT Authentication**
+- **Swagger** (com suporte a bearer token)
+- **Serilog** (Console + Rolling File)
+- **Docker / Docker Compose**
 
-	http://localhost:5000
-	
-Este projeto utiliza EF Core Migrations com a estratégia Code First, ou seja, o banco de dados é criado a partir do modelo de entidades do código.
+---
 
-Em geral, ao rodar o projeto via Docker, as migrations são aplicadas automaticamente no container da API.
-Caso haja problemas ao aplicar as migrations via Docker:
+## Arquitetura
 
-É possível gerar manualmente o script SQL correspondente à migration e aplicá-lo diretamente no banco utilizando uma IDE como o SQL Server Management Studio ou o Azure Data Studio.
-Para isso, utilize o seguinte comando:
+O projeto segue uma arquitetura em camadas:
 
-	dotnet ef migrations script --project Escola.Data --startup-project Escola.API --output D:\scriptBaseDeDadosEscola.sql
-	
-O arquivo "Escola - Acessos a API Backend.postman_collection.json" é uma exportação do conjunto de acessos no Postman.
+- **API**: Controllers, validações de entrada e DTOs
+- **Services / Application**: Regras de negócio e orquestração
+- **Repositories / Infra**: Persistência de dados (EF Core) e acesso a banco
+- **Domain**: Entidades, contratos e regras centrais
+
+> Importante: **Controllers não acessam o Repository diretamente**. Toda interação passa pela camada de Services.
+
+---
+
+## Rodando com Docker (recomendado)
+
+### Pré-requisitos
+- Docker + Docker Compose
+
+### Subir o ambiente
+
+Na raiz do projeto (onde está o `docker-compose.yml`):
+
+```bash
+docker compose up -d --build

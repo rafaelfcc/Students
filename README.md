@@ -41,4 +41,6 @@ Tendo uma instalação do Docker Desktop, abra alguma ferrametna de prompt de co
 docker compose up -d --build
 ```
 
-Caso queira testar os endpoints isoladamente pelo Swagger, na parte de autenticação, coloque apenas a string do token gerada dinamicamente, sem escrever 'Bearer' no início
+Nota1: Caso queira testar os endpoints isoladamente pelo Swagger, na parte de autenticação, coloque apenas a string do token gerada dinamicamente, sem escrever 'Bearer' no início
+
+Nota2: Caso o projeto apareça no Visual Studio como hierarquia de pastas, clique duas vezes no ícone do Solution, e em seguida, coloque o projeto API da camada Presentation como projeto de inicialização.
